@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --texto: #0f2a4a;
+  --borda: #2f6fd1;
+  --botao-fundo: rgba(255, 255, 255, 0.45);
+  --botao-hover: rgba(255, 255, 255, 0.75);
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 80px 16px 40px;
+  /* Fundo degradê inspirado no Figma */
+  background:
+    radial-gradient(circle at 15% 20%, #ffffff 0%, transparent 35%),
+    radial-gradient(circle at 55% 40%, #fff3b8 0%, transparent 40%),
+    radial-gradient(circle at 90% 15%, #7fb2f0 0%, transparent 40%),
+    radial-gradient(circle at 95% 55%, #b9d6fa 0%, transparent 30%),
+    radial-gradient(circle at 5% 90%, #ffd84d 0%, transparent 35%),
+    #f7faff;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.perfil img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f5c400;
+  background: #fff;
+}
+
+.perfil h1 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.perfil p {
+  font-size: 15px;
+}
+
+.botoes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.botao {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--botao-fundo);
+  backdrop-filter: blur(6px);
+  color: var(--texto);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.botao:hover {
+  background: #1f5fbf;
+  color: #ffffff;
+  border-color: #f5c400;
+  transform: translateY(-2px);
+}
+
+.voltar {
+  align-self: flex-start;
+  margin-bottom: 24px;
+  color: var(--texto);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+.redes {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.redes a {
+  color: var(--texto);
+  transition: opacity 0.2s;
+}
+
+.redes a:hover {
+  opacity: 0.6;
+}
+
+.redes svg {
+  width: 24px;
+  height: 24px;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+.sobre {
+  width: 100%;
+  padding: 32px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--botao-fundo);
+  backdrop-filter: blur(6px);
+  text-align: left;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.sobre h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.sobre p + p {
+  margin-top: 12px;
+}
+
+.projetos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--botao-fundo);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-conteudo {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.card h3 {
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.card .botao {
+  padding: 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 48px;
+  }
+
+  .sobre {
+    padding: 20px;
+  }
+}
+
+.vazio {
+  width: 100%;
+  padding: 32px;
+  border: 1px dashed var(--borda);
+  border-radius: 8px;
+  background: var(--botao-fundo);
+  backdrop-filter: blur(6px);
+  font-size: 15px;
+}
